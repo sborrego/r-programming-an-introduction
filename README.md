@@ -56,16 +56,3 @@ You are welcome to check out the lesson plan ahead of time.
 * The *.html* file will open in your browser 
 * <a href="https://docs.google.com/document/d/1nKTOfTxGtRe4H_P4BQsV3zjj-1pLZopC/edit?usp=sharing&ouid=107300023887277169043&rtpof=true&sd=true">HERE</a> is a link to the lesson plan in word doc form! 
 * Please let me know if you have any issues. Happy scripting!
-
-***
-
-## Schedule
-
-| Time       |    Topic                                     |
-|:----------:|:---------------------------------------------|
-| 10:00 AM   | Introductions                                |
-|            | Simple math                                  |
-|            | Functions in R                               |
-|            | Data frames                                  |
-|            | Plotting                                     |
-| 12:00 PM   | End of Workshop                              |
