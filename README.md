@@ -1,6 +1,6 @@
 # R Programming: An Introduction
 University of South Florida - Fall Workshop  
-Tuesday, September 27, 2022  
+Tuesday, October 20, 2022  
 9:00 - 10:30 am EST  
 
 R is a beginner friendly programming language used for statistical computing and graphics. In this workshop, you will be introduced to the basics of R and begin to explore data analysis. This workshop is one of two R programming lessons and it is recommended to continue on to [Data Analysis and Visualizations with R](https://github.com/sborrego/data-analysis-and-visualization-in-R). Attendees do not need to have any prior programming experience, we will start from the beginning!
@@ -52,20 +52,7 @@ Another option is install all the software on your computer. You will need to in
 You are welcome to check out the lesson plan ahead of time. 
 
 * The files listed above can be downloaded by clicking on the green **CODE** button and selecting **Download Zip** in the menu. 
-* The *.rmd* file can be opened in RStudio
-* The *.html* file will open in your browser 
-* <a href="https://docs.google.com/document/d/1nKTOfTxGtRe4H_P4BQsV3zjj-1pLZopC/edit?usp=sharing&ouid=107300023887277169043&rtpof=true&sd=true">HERE</a> is a link to the lesson plan in word doc form! 
+* The *.Rmd* file can be opened in RStudio
+* The *.html* file will open in your browser
+* The *.pdf* file will open using any PDF viewing software
 * Please let me know if you have any issues. Happy scripting!
-
-***
-
-## Schedule
-
-| Time       |    Topic                                     |
-|:----------:|:---------------------------------------------|
-| 10:00 AM   | Introductions                                |
-|            | Simple math                                  |
-|            | Functions in R                               |
-|            | Data frames                                  |
-|            | Plotting                                     |
-| 12:00 PM   | End of Workshop                              |
