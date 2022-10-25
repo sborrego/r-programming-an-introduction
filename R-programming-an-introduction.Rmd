@@ -1,13 +1,12 @@
 ---
 title: "R Programming: An Introduction"
 author: "Stacey Borrego"
-date: "9/27/2022"
+date: "10/27/2022"
 output:
-   
+  word_document: default
+  html_document: default
   pdf_document: 
       highlight: zenburn
-  html_document: default
-  word_document: default
 fontsize: 12pt
 urlcolor: blue
 linkcolor: red
@@ -25,6 +24,8 @@ knitr::opts_chunk$set(echo = TRUE)
 * [Advanced R](http://adv-r.had.co.nz/) by Hadley Wickham
 * [ggplot2: Elegant graphics for data analysis](https://ggplot2-book.org/) by 
 Hadley Wickham
+* [R Studio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) by RStudio
+* [The R Gallery](https://bookdown.org/content/b298e479-b1ab-49fa-b83d-a57c2b034d49/) by Kyle W. Brown
 
 ## Simple math
 
@@ -484,7 +485,7 @@ dim(iris)
 # in the format: 
 # data_frame[row_index, column_index]
 
-# Extract the first row and first column from surveys
+# Extract the first row and first column from iris
 iris[1, 1]
 
 # Extract the first row and sixth column
@@ -501,14 +502,14 @@ iris[, 1]
 iris[1] # No comma! 
 
 # Select multiple rows or columns with vectors
-# Extract the first three rows of the 5th and 6th column
+# Extract the first three rows of the 1st and 2nd columns
 iris[c(1, 2, 3), c(1, 2)] 
 
-# We can use the : operator to create those vectors 
+# We can use the : operator to create a range and select all listed vectors
 iris[1:3, 1:2] 
 
-# This is equivalent to head(surveys)
-iris[1:5, ]
+# This is equivalent to head(iris)
+iris[1:6, ]
 
 # Subsetting with single square brackets ("[]") always returns a data frame.
 # If you want a vector, use double square brackets ("[[]]")
@@ -529,11 +530,11 @@ iris$Species
 
 ```{r eval=FALSE}
 # Exceptions: subsetting the whole data frame, except the first 
-# and second column
+# and second columns
 iris[, -c(1, 2)]                
 
 # Exceptions: subsetting all columns of the data frame 
-# but only the first six rows
+# except for the first six rows
 iris[-(7:nrow(iris)), ] 
 ```
 
@@ -555,25 +556,31 @@ Every ggplot2 plot has three key components:
 * At least one **layer** which describes how to render each observation. Layers are usually created with a geom function. It is important to note that layers are added with a `+`.
 
 ```{r, fig.width =5, fig.height = 3, fig.align='center'}
-# Install the following libraries
+# Install the following library
 # install.packages("ggplot2")
 
 # Load the ggplot2 package to access its unique functions 
 library(ggplot2)
 
-# Scatter Plot
+
+# Step 1: Make the plot object by indicating the input data 
+# and plot aesthetics
+# Example of creating the plot object for a scatter plot
 plot_1 <- ggplot(data = iris, 
                  aes(x = Sepal.Length, 
                      y = Sepal.Width)) 
 
-# Basic scatter plot adding a `geom_point()` layer
+# Step 2: Add layers to the plot object to plot the data. Here we add 
+# the points of the scatter plot
+# Example of a basic scatter plot adding a `geom_point()` layer
 plot_1 + 
   geom_point()
 
 # Find out the options for `geom_point()`
 ?geom_point
 
-# Colorful scatter plot adding aesthetic mappings to the 
+# Step 3: Modify each layer using specific arguments and aesthetics options
+# Example of a colorful scatter plot adding aesthetic mappings to the 
 # `geom_point()` layer 
 plot_1 + 
   geom_point(aes(color = Species, 
@@ -674,7 +681,8 @@ nlevels(sample)
 Sometimes it is necessary to convert data from one type to another
 
 ```{r eval=FALSE}
-sample
+sample <- factor(sample, 
+                 levels = c("wild type", "experimental"))
 
 as.character(sample)
 sample_char <- as.character(sample)
@@ -737,10 +745,13 @@ dplyr functions
 ### Selecting columns and filtering rows
 
 * `select()` subset columns
-    + The first argument is the data frame (surveys), and the subsequent arguments are the columns to keep.
+    + The first argument is the data frame (iris), and the subsequent arguments are the columns to keep.
 * `filter()` subset rows on conditions
 
 ```{r eval=TRUE}
+# Install Tidyverse
+# install.packages("tidyverse")
+
 # Load the umbrella package Tidyverse
 library(tidyverse)
 
@@ -778,10 +789,10 @@ Pipes let you take the output of one function and send it directly to the next, 
 ```{r eval=FALSE}
 # Filter rows and save as an object
 small <- filter(iris, 
-            Petal.Length < 5)
+                Petal.Length < 5)
 
 # Select columns and save as another object
-small_x <- select(x,
+small_x <- select(small,
                   Species, Petal.Length, Petal.Width)
 small_x
 
@@ -888,6 +899,7 @@ iris %>%
             petal_width_min = min(Petal.Width),
             petal_width_max = max(Petal.Width))
 ```
+
 ### Exporting plots
 
 `ggsave()` allows you easily change the dimension and resolution of your plot by adjusting the appropriate arguments (width, height, and dpi)
