@@ -26,6 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Hadley Wickham
 * [R Studio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) by RStudio
 * [The R Gallery](https://bookdown.org/content/b298e479-b1ab-49fa-b83d-a57c2b034d49/) by Kyle W. Brown
+* [Introduction to R](https://intro2r.com/) by Douglas, Roos, Mancini, Cuoto, & Lusseau
 
 ## Simple math
 
@@ -642,8 +643,90 @@ plot_2 +
        y = "Petal Width",
        title = "Petal Width of Iris Species") +
   theme_bw()
+```
+\newpage
+
+R comes with default colors and so does ggplot2. These are nice enough but sometimes
+it is nice to customize our plots. There are few ways we can do this.
+
+* [RColorBrewer](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html): Such a
+helpful tool - contains color palettes and can make a range of colors of your choice. 
+Must be installed and loaded prior to use:
+  - `install.packages("Rcolorbrewer")`
+  - `library(Rcolorbrewer)`
+  
+* [viridisLite](https://ggplot2.tidyverse.org/reference/scale_viridis.html): This is part
+of ggplot2 that provides color palettes. This does not need to be installed and loaded as it comes with ggplot2. 
+  - Another resource
+
+* [Colors in R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf): A list of 
+all the color names available in R
+
+* You can also provide hexidecimal values. [HERE](https://www.w3schools.com/colors/colors_picker.asp?color=00bfff) is a helpful tool.
+
+
+```{r, fig.width = 5, fig.height = 3, fig.align='center', warning = FALSE}
+
+# Creating the base plot. Here we have indicated the data set and its 
+# mappings.We have also added which column should be used for color 
+# and fill mappings.
+plot_3 <- ggplot(data = iris, 
+                 aes(x = Petal.Length, 
+                     y = Petal.Width,
+                     color = Species,
+                     fill = Species)) 
+
+# Basic boxplot adding a `geom_boxplot()` layer
+plot_3 +
+  geom_point()
+  
+```
+
+\newpage
+
+```{r, fig.width = 5, fig.height = 3, fig.align='center', warning = FALSE}
+# RColorBrewer Examples
+# install.packages("RColorBrewer")
+library(RColorBrewer) 
+
+# RColorBrewer Example 1
+plot_3 + 
+  geom_point(size = 2) +
+  scale_color_brewer(palette = "PuOr")
+
+# RColorBrewer Example 2
+plot_3 + 
+  geom_point(size = 2) +
+  scale_color_brewer(palette = "Blues")
+
+# viridisLite Example 1
+# To be used with discrete data (non-continous)
+# Uses default color option
+plot_3 +
+  geom_point(size = 2) +
+  scale_colour_viridis_d()
+
+# viridisLite Example 2
+# To be used with discrete data (non-continous)
+# C
+plot_3 +
+  geom_point(size = 2) +
+  scale_colour_viridis_d(option = "plasma")
+
+# Using Your Own Colors, Example 1
+plot_3 +
+  geom_point(size = 2) +
+  scale_color_manual(values = c("#440154FF", "#21908CFF", "#FDE725FF")) 
+
+# Using Your Own Colors, Example 2
+plot_3 +
+  geom_point(size = 2) +
+  scale_color_manual(values = c("brown", "red", "skyblue")) 
+
 
 ```
+
+\newpage
 
 ## Factors
 
@@ -939,6 +1022,13 @@ my_plot <- ggplot(data = iris,
 ggsave("path/name_of_file.png", my_plot, width = 15, height = 10)
 
 ```
+### Importing Data
+
+It is fun to practice our R skills and try out new methods with the built-in
+R data sets. However, we need the option to load read data into R! This can 
+be done using a few different options depending on the delimiter of your original file. 
+
+I'll refer you to section of [IMPORTING DATA](https://intro2r.com/importing-data.html) from this lovely online resource **Introduction to R**. It even has videos!
 
 
 # Review
@@ -958,7 +1048,6 @@ ggsave("path/name_of_file.png", my_plot, width = 15, height = 10)
     + or (`|`), and (`&`)
     + less than (`<`, `<=`), greater than (`>`, `>=`), equal to (`==`)
     
-
 ## Data
 
 * The most common object you'll see are data frames, which are a collection of vectors of the same length.
