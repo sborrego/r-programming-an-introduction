@@ -3,10 +3,10 @@ title: "R Programming: An Introduction"
 author: "Stacey Borrego"
 date: "10/27/2022"
 output:
-  word_document: default
-  html_document: default
   pdf_document: 
       highlight: zenburn
+  html_document: default
+  word_document: default
 fontsize: 12pt
 urlcolor: blue
 linkcolor: red
@@ -324,22 +324,38 @@ animals[animals %in% c("rat", "cat", "duck", "fish")]
 
 
 ```{r eval=FALSE}
-heights <- c(1, 2, 3, NA, 5, 6)
+heights <- c(1, 2, 3, NA, 5, NA)
 
+# Performing an operation on a vector with NA will usually return NA
 mean(heights)
 max(heights)
 
+# Using `na.rm = TRUE` will exclude NA values and perform the operation
 mean(heights, na.rm = TRUE)
 max(heights, na.rm = TRUE)
 ```
 
 ```{r eval=FALSE}
+# Returns vector of boolean values indicating if the value NA or not
+is.na(heights)
+
+# Sum of all the NAs present
+sum(is.na(heights))
+
+# Identifies the index containing the NA value
+which(is.na(heights))
+
+# Returns the TRUE values for `is.na()`
 heights[is.na(heights)]
+
+# Returns the FALSE values for `is.na()`
 heights[!is.na(heights)]
 
+# Returns values with incomplete cases (NA) removed
 na.omit(heights)
 mean(na.omit(heights))
 
+# Returns values with complete cases only - NA removed
 complete.cases(heights)
 heights[complete.cases(heights)]
 ```
