@@ -19,8 +19,8 @@ Website: [Posit Cloud](https://posit.cloud/)
 - Click **Get Started** 
 - Click **Sign Up**
 - Provide the necessary information or log in if you have an account with RStudio Cloud
-- Under *SPACES* on the left side, Your Content should be selected
-- On the far right, under your name at the top, click on the blue **New Project** button, then "New RStudio Project"
+- Under *Your Workspace* on the left side, *Your Content* should be selected
+- On the far right, under your name at the top, click on the blue **New Project** button, then **New RStudio Project**
 - At the top you can *rename* the project by clicking on Untitled Project
 - Prepare for the workshop by following the installing packages instructions below
 You are all set! This workspace will be saved and ready to access anytime in the future.
