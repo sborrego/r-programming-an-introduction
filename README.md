@@ -27,8 +27,7 @@ You are all set! This workspace will be saved and ready to access anytime in the
 
 ### Option 2
 
-Another option is install all the software on your computer. You will need to install **BOTH** the R programming language and RStudio. 
-Here is a link to great instructions for all operating systems: [Installation Instructions](https://preview.carpentries.org/R-ecology-lesson/index.html#install-r-and-rstudio)
+Another option is install all the software on your computer. You will need to install **BOTH** the R programming language and RStudio. If you already have R and RStudio installed, it is recommended to update both. Here is a link to great instructions for all operating systems for both installation and updating: [Installation Instructions](https://preview.carpentries.org/R-ecology-lesson/index.html#install-r-and-rstudio)
 
 ***
 
