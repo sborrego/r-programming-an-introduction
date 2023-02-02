@@ -9,7 +9,7 @@ R is a beginner friendly programming language used for statistical computing and
 
 ## Install R and RStudio or get access on Posit (Formerly RStudio Cloud)
 
-To participate in this workshop you will need to have access to the programming language R and RStudio - see the options below. Please be prepared and have R and RStudio setup using either method before the workshop. If you are experience any trouble with installation, please contact me prior to the workshop **staceyborrego@gmail.com**.
+To participate in this workshop you will need to have access to the programming language R and RStudio - see the options below. Please be prepared and have R and RStudio setup using either method before the workshop. If you experience any trouble with installation, please contact me prior to the workshop **staceyborrego@gmail.com**.
 
 ### Option 1 - **recommended**
 
