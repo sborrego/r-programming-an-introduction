@@ -1,12 +1,12 @@
 ---
 title: "R Programming: An Introduction"
 author: "Stacey Borrego"
-date: "10/27/2022"
+date: "02/06/2022"
 output:
+  word_document: default
+  html_document: default
   pdf_document: 
       highlight: zenburn
-  html_document: default
-  word_document: default
 fontsize: 12pt
 urlcolor: blue
 linkcolor: red
