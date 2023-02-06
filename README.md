@@ -1,5 +1,5 @@
 # R Programming: An Introduction
-University of South Florida - Fall Workshop  
+University of South Florida - Spring Workshop  
 Monday, February 6, 2023  
 9:00 - 10:30 am EST  
 
