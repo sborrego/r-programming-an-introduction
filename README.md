@@ -1,5 +1,5 @@
 # R Programming: An Introduction
-University of South Florida - Fall Workshop  
+University of South Florida - Spring Workshop  
 Tueday, January 30, 2024
 9:00 - 10:30 am EST  
 
