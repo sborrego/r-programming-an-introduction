@@ -1,6 +1,6 @@
 # R Programming: An Introduction
 University of South Florida - Spring Workshop  
-Tueday, January 30, 2024  
+Tuesday, January 30, 2024  
 9:00 - 10:30 am EST  
 
 R is a beginner friendly programming language used for statistical computing and graphics. In this workshop, you will be introduced to the basics of R and begin to explore data analysis. This workshop is one of two R programming lessons and it is recommended to continue on to [Data Analysis and Visualizations with R](https://github.com/sborrego/data-analysis-and-visualization-in-R). Attendees do not need to have any prior programming experience, we will start from the beginning!
