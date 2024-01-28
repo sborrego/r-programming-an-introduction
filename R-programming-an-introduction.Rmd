@@ -1,12 +1,12 @@
 ---
 title: "R Programming: An Introduction"
 author: "Stacey Borrego"
-date: "1/26/2023"
+date: "1/26/2024"
 output:
-  html_document: default
+  word_document: default
   pdf_document: 
       highlight: zenburn
-  word_document: default
+  html_document: default
 fontsize: 12pt
 urlcolor: blue
 linkcolor: red
@@ -20,11 +20,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * Data Carpentry: [Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/index.html)
 * [Tidyverse](https://tidyverse.org/): R packages for Data Science
-* [R for Data Science](https://r4ds.had.co.nz/) by Hadley Wickham and Garret Grolemund
+* [R for Data Science 2nd Edition](https://r4ds.hadley.nz/) by Hadley Wickham and Garret Grolemund
 * [Advanced R](http://adv-r.had.co.nz/) by Hadley Wickham
 * [ggplot2: Elegant graphics for data analysis](https://ggplot2-book.org/) by 
 Hadley Wickham
-* [R Studio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) by RStudio
+* [Posit Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) by Posit
 * [The R Gallery](https://bookdown.org/content/b298e479-b1ab-49fa-b83d-a57c2b034d49/) by Kyle W. Brown
 * [Introduction to R](https://intro2r.com/) by Douglas, Roos, Mancini, Cuoto, & Lusseau
 
